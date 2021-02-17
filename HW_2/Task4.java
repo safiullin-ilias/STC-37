@@ -1,5 +1,6 @@
 package HW_2;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Task4 {
@@ -8,8 +9,9 @@ public class Task4 {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
         int[] array = new int[n];
-        int MinValue = Integer.MAX_VALUE;
-        int MaxValue = Integer.MIN_VALUE;
+
+        int MinValue = Integer.MAX_VALUE, minInd = 0;
+        int MaxValue = Integer.MIN_VALUE, maxInd = 0;
 
         System.out.println("Vvedite 4isla: ");
         int __inVal;
@@ -17,16 +19,25 @@ public class Task4 {
             __inVal = scanner.nextInt();
             array[i] = __inVal;
 
-            if (MinValue > __inVal)
+            if (MinValue > __inVal) {
                 MinValue = __inVal;
-            if (MaxValue < __inVal)
+                minInd = i;
+            }
+            if (MaxValue < __inVal) {
                 MaxValue = __inVal;
+                maxInd = i;
+            }
         }
         scanner.close();
+        
+        System.out.print("Vvedenyi massiv = ");
+        System.out.println(Arrays.toString(array));
 
-        System.out.print("Minimalnoe 4islo = ");
-        System.out.println(MinValue);
-        System.out.print("Maximalnoe 4islo = ");
-        System.out.println(MaxValue);
+        int t = array[minInd];
+        array[minInd] = array[maxInd];
+        array[maxInd] = t;
+
+        System.out.print("Min-Max massiv = ");
+        System.out.println(Arrays.toString(array));
     }
 }
