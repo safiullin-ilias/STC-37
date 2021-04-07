@@ -45,7 +45,7 @@ public class Task1 {
         System.out.println(Task1.ArrayToInt(array));
     }
 
-    static void BubbleSortArray(int[] array) {
+    public static void BubbleSortArray(int[] array) {
         int l = array.length;
         for (int i = 0; i < l - 1; i++) {
             for (int j = i + 1; j < l; j++)
@@ -57,7 +57,7 @@ public class Task1 {
         }
     }
 
-    static int ArrayToInt(int[] array) {
+    public static int ArrayToInt(int[] array) {
         int l = array.length;
         int number = 0;
         for (int i = 0; i < l; i++) {
@@ -69,7 +69,7 @@ public class Task1 {
         return number;
     }
 
-    static int ArraySum(int[] array) {
+    public static int ArraySum(int[] array) {
         int l = array.length;
         int arraySum = 0;
         for (int i = 0; i < l; i++) {
@@ -78,12 +78,12 @@ public class Task1 {
         return arraySum;
     }
 
-    static double ArrayAvg(int[] array) {
+    public static double ArrayAvg(int[] array) {
         int l = array.length;
         return ArraySum(array) / (double) l;
     }
 
-    static void OppositeArray(int[] array) {
+    public static void OppositeArray(int[] array) {
         int l = array.length;
         for (int i = 0; i < l / 2; i++) {
             int t = array[i];
@@ -92,7 +92,7 @@ public class Task1 {
         }
     }
 
-    static void MinMaxArray(int[] array) {
+    public static void MinMaxArray(int[] array) {
         int MinValue = Integer.MAX_VALUE, minInd = 0;
         int MaxValue = Integer.MIN_VALUE, maxInd = 0;
 
@@ -116,7 +116,7 @@ public class Task1 {
     }
 
     
-    static int[] CopyArray(int[] array) {
+    public static int[] CopyArray(int[] array) {
         int l = array.length;
         int[] array_2 = new int[l];
         for (int i = 0; i < l; i++) {

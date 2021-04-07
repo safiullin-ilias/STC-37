@@ -1,7 +1,6 @@
 package HW_4;
 
 import java.util.Scanner;
-import java.util.Arrays;
 
 public class Task3 {
     static int[] numbers;

@@ -20,7 +20,7 @@ public class Channel {
         name = channelName;
     }
 
-    public Program[] programs = new Program[0];;
+    public Program[] programs = new Program[0];
 
     public void addProgram(Program program) {
         int l = programs.length;

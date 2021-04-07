@@ -6,6 +6,7 @@ public class Task1 {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Vvedite 4islo dlya proverki: ");
         int Number = scanner.nextInt();
+        scanner.close();
         if (IsPowerOf2(Number))
             System.out.println("4islo " + Number + " - stepen dvoiki");
         else
